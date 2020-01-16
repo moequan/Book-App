@@ -1,7 +1,7 @@
 import React from 'react';
 import '../scss/App.scss';
 import books from '../data/books';
-import BookCategories from './BookCategories'; 
+import BookCategories from '../components/BookCategories'; 
 
 
 class App extends React.Component {

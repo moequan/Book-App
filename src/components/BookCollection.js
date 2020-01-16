@@ -1,23 +1,15 @@
 import React from 'react';
-import BookCollection from './BookCollection';
+import Book from './Book';
 
-class BookCategories extends React.Component {
+class BookCollection extends React.Component {
   render() {
     const data = this.props.data;
-    const bookLists = data.map(el => {
-      return (
-        <div className="category" key={el.list_id}>
-          <div className="title">
-            <p>{el.display_name}</p>
-            <img src={el.list_image} alt={el.display_name}></img>
-          </div>
-          <BookCollection data={el.books}></BookCollection>
-        </div>
-      );
-    });
 
-    return <div className="categories-container">{bookLists}</div>;
+    const bookLists = data.map(el => {
+      return <Book data={el} key={el.book_uri}></Book>;
+    });
+    return <div className="collection">{bookLists}</div>;
   }
 }
 
-export default BookCategories;
+export default BookCollection;

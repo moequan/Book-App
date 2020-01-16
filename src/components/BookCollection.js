@@ -5,10 +5,10 @@ class BookCollection extends React.Component {
   render() {
     const data = this.props.data;
 
-    const bookLists = data.map(el => {
+    const listOfBooks = data.map(el => {
       return <Book data={el} key={el.book_uri}></Book>;
     });
-    return <div className="collection">{bookLists}</div>;
+    return <div className="collection">{listOfBooks}</div>;
   }
 }
 

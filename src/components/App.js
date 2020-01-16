@@ -1,14 +1,18 @@
 import React from 'react';
 import '../scss/App.scss';
+import books from '../data/books';
+import BookCategories from './BookCategories'; 
 
-function App() {
-  return (
-    <div className="App">
-     <h1>
-       Heeeeelo
-     </h1>
-    </div>
-  );
+
+class App extends React.Component {
+  render() {
+    const lists = books.results.lists;
+    return (
+      <div className="app">
+        <BookCategories data={lists}></BookCategories>
+      </div>
+    );
+  }
 }
 
 export default App;
